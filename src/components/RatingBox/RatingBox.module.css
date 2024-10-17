@@ -1,0 +1,75 @@
+.ratingContainer {
+    width: 500px;
+    height: 400px;
+    display: flex;
+    border-radius: 10px;
+    padding: 2rem;
+    margin: auto;
+    flex-flow: column wrap;
+    justify-content: center;
+    background-color: var(--very-dark-blue);
+    color: var(--white);
+    & > p {
+        color: var(--light-grey);
+        height: 100px;
+    }
+}
+
+.starContainer {
+    align-self:flex-start;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: var(--dark-blue);
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    width: 50px;
+    height: 50px;
+    & > img {
+        align-self: center;
+        justify-self: center;
+    }
+}
+
+.ratingForm {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: (5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-self: center;
+    gap: 15px;
+    & > div {
+        grid-row-start:1;
+        row-gap: 10px;
+        background-color: var(--dark-blue);
+        color: var(--light-grey);
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        &:hover {
+            cursor: pointer;
+            transition: backgroound-color 0.5s ease-in-out;
+            background-color: var(--orange);
+            color: var(--dark-blue);
+        }
+    }
+    & > button[type="submit"] {
+        grid-row-start: 2;
+        grid-column: span 5;
+        background-color: var(--orange);
+        border-radius: 20px;
+        &:hover {
+            background-color: var(--white);
+            color: var(--dark-blue)
+        }
+    }
+}
+
+.containerClicked {
+    background-color: var(--white);
+    color: var(--very-dark-blue);
+}
